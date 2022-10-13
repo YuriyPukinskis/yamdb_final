@@ -2,20 +2,21 @@ from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import EmailMessage
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
-from rest_framework import status, viewsets, filters
+from rest_framework import filters, status, viewsets
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from reviews.models import Category, Genre, Title, Review
+from reviews.models import Category, Genre, Review, Title
+
 from .filters import TitleFilter
 from .mixins import ListCreateDestroyViewSet
 from .permissions import IsAdminOrReadOnly, IsAuthorOrAdminOrReadOnly
-from .serializers import (CategorySerializer, CreateTokenSerializer,
-                          GenreSerializer, SignUpSerializer,
-                          TitleReadSerializer, TitleCreateSerializer,
-                          CommentSerializer, ReviewSerializer)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          CreateTokenSerializer, GenreSerializer,
+                          ReviewSerializer, SignUpSerializer,
+                          TitleCreateSerializer, TitleReadSerializer)
 
 
 def send_email(user, code):

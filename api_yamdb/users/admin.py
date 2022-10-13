@@ -3,7 +3,6 @@ from django.contrib.auth import get_user_model
 
 from .forms import UserForm
 
-
 user = get_user_model()
 
 

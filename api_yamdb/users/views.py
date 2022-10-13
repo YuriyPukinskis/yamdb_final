@@ -5,6 +5,7 @@ from rest_framework.response import Response
 
 from api.permissions import IsRoleAdmin
 from users.models import CustomUser
+
 from .serializers import UserSerializer
 
 
