@@ -2,8 +2,9 @@ from rest_framework import filters, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from api.permissions import IsRoleAdmin
 from users.models import CustomUser
+from api.permissions import IsRoleAdmin
+
 
 from .serializers import UserSerializer
 
