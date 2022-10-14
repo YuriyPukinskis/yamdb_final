@@ -9,8 +9,9 @@ services:
       - ./.env
 
   web:
-    build:
-      ../api_yamdb/
+    # build:
+    #   ../api_yamdb/
+    image: pukinskisyuri/infra_actions:latest
     restart: always
     volumes:
       - static_value:/app/static/
