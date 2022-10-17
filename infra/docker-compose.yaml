@@ -9,8 +9,6 @@ services:
       - ./.env
 
   web:
-    # build:
-    #   ../api_yamdb/
     image: pukinskisyuri/api_yamdb:latest
     restart: always
     volumes:
