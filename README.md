@@ -12,4 +12,4 @@ Continuous Integration и Continuous Deployment для ранее разрабо
     скопировать на сервер файлы docker-compose.yaml, .env и папку nginx
     создать переменные окружения в разделе secrets репозитория
 ## Документация к API доступна по адресу
-https://github.com/YuriyPukinskis/api_yamdb/blob/master/api_yamdb/static/redoc.yaml  
+https://github.com/YuriyPukinskis/api_yamdb/blob/master/api_yamdb/static/redoc.yaml   
