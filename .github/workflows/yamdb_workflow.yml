@@ -60,6 +60,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
+            sudo docker pull pukinskisyuri/api_yamdb:latest
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
@@ -68,7 +69,8 @@ jobs:
             echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
             echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
-            echo DB_PORT=${{ secrets.DB_PORT }} >> .env
+            echo DB_PORT=${{ secrets.DB_PORT }} >> .
+            
             sudo docker-compose up -d
 
   send_message:
